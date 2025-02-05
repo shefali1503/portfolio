@@ -1,0 +1,49 @@
+.hero h1{
+    font-family: "Parisienne", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 5rem;
+} 
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+h2{
+    font-family: serif;
+    font-size: 3rem;  
+    color: purple;
+}
+.title{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero{
+    background-color: lavender;
+    width: 100%;
+    color: purple;
+}
+.top-cloud{
+    position:absolute;
+    top: 40px;
+    left: 75%;
+}
+.bottom-cloud{
+    position: relative;
+    bottom: 100px;
+    left:200px;
+}
+.profile{
+    border-radius: 50%;
+}
+.heading{
+    color:purple;
+    margin-top:30px;
+    margin-bottom: 20px;
+
+}
