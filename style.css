@@ -1,49 +1,233 @@
-.hero h1{
-    font-family: "Parisienne", serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 5rem;
-} 
-body, html {
-    overflow-x: hidden;
+/* Home Section */
+body,
+html {
     margin: 0;
     padding: 0;
-    width: 100%;
+    height: 100%;
+    color: white;
+    background: black;
+    font-family: Arial, sans-serif;
+
 }
 
-h2{
-    font-family: serif;
-    font-size: 3rem;  
-    color: purple;
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
 }
-.title{
+
+/* Section styling */
+.home {
+    position: relative;
+    height: 90vh;
     display: flex;
-    height: 80vh;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    color: #f5f0e6;
+    text-align: center;
 }
-.hero{
-    background-color: lavender;
-    width: 100%;
-    color: purple;
-}
-.top-cloud{
-    position:absolute;
-    top: 40px;
-    left: 75%;
-}
-.bottom-cloud{
-    position: relative;
-    bottom: 100px;
-    left:200px;
-}
-.profile{
-    border-radius: 50%;
-}
-.heading{
-    color:purple;
-    margin-top:30px;
-    margin-bottom: 20px;
 
+/* Nav styling */
+.nav-bar {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    background: rgba(36, 35, 35, 0.6);
+    border: 2px solid grey;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.nav-bar a:hover {
+    color: #ddd;
+    background-color: rgb(41, 39, 39);
+}
+
+/* Heading styling */
+.home h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* About-me section */
+#about-me {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    max-width: 75%;
+    gap: 80px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 2.0;
+    font-weight: bold;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin-right: 15px;
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+.about-img {
+    flex: 0.8;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    /* fills without distortion */
+}
+
+/* Skills section */
+#skills {
+    padding: 50px 20px;
+    margin: 50px 0px;
+}
+
+.skills-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.skills-grid {
+    margin: 0 auto;
+    /* center the grid automatically */
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 75%;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.skill-card {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 10px 20px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    cursor: default;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.skill-card img {
+    width: 30px;
+    height: 30px;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .home {
+        position: relative;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #f5f0e6;
+        text-align: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-title {
+        font-size: 2.5rem;
+    }
+
+    .skills-grid {
+        gap: 10px;
+    }
+
+    .skill-card {
+        flex: 1 1 150px;
+        font-size: 16px;
+    }
+
+    .skill-card img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* 📱 Small mobile screens */
+@media (max-width: 480px) {
+    .skills-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .skill-card {
+        flex: 1 1 120px;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .skill-card img {
+        width: 20px;
+        height: 20px;
+    }
 }
